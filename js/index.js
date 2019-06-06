@@ -64,9 +64,11 @@ navLinks[5].textContent = 'Contact';
 
 // cta
 let ctaH1 = document.querySelector('h1');
+let linebreak = document.createElement('br');
 
 // !!!!!!!!!!!!!--------NEEDS BREAKS----------!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-ctaH1.textContent = 'Dom is Awesome';
+ctaH1.innerText = 'DOM' + <br /> + 'Is' + <br /> + 'Awesome';
+
 //DOM<br> Is<br> Awesome
 
 let ctaButton = document.querySelector('button');
@@ -98,9 +100,13 @@ bottomPs[1].textContent =
 bottomPs[2].textContent =
   'Vision content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
 
-//.contact h4 = "Contact"
-//.contact p = "123 Way 456 Street" </br> "Somewhere, USA"
-//.contact p = "1 (888) 888-8888"
-//.contact p = sales@greatidea.io
+let contactH4 = document.querySelector('.contact h4');
+contactH4.textContent = 'Contact';
 
-//footer p = "Copyright Great Idea! 2018"
+let contactPs = document.querySelectorAll('.contact p');
+contactPs[0].textContent = '123 Way 456 Street Somewhere, USA';
+contactPs[1].textContent = '1 (888) 888-8888';
+contactPs[2].textContent = 'sales@greatidea.io';
+
+let footerP = document.querySelector('footer p');
+footerP.textContent = 'Copyright Great Idea! 2018';
