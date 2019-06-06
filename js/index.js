@@ -54,6 +54,9 @@ middleImg.setAttribute('src', siteContent['main-content']['middle-img-src']);
 
 // nav
 let navLinks = document.querySelectorAll('nav a');
+navLinks.forEach(element => {
+  element.style.color = 'green';
+});
 
 navLinks[0].textContent = 'Services';
 navLinks[1].textContent = 'Product';
@@ -62,14 +65,22 @@ navLinks[3].textContent = 'Features';
 navLinks[4].textContent = 'About';
 navLinks[5].textContent = 'Contact';
 
+let navChild = document.querySelector('nav > a');
+let navParent = navChild.parentNode;
+
+let link1 = document.createElement('a');
+link1.textContent = 'Last';
+navParent.appendChild(link1);
+
+let link2 = document.createElement('a');
+link2.textContent = 'First';
+navParent.prepend(link2);
+
 // cta
 let ctaH1 = document.querySelector('h1');
 let linebreak = document.createElement('br');
 
-// !!!!!!!!!!!!!--------NEEDS BREAKS----------!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-ctaH1.innerText = 'DOM' + <br /> + 'Is' + <br /> + 'Awesome';
-
-//DOM<br> Is<br> Awesome
+ctaH1.textContent = 'DOM Is Awesome';
 
 let ctaButton = document.querySelector('button');
 ctaButton.textContent = 'Get Started';
